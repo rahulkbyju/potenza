@@ -50,3 +50,24 @@ document.querySelector('form').addEventListener('submit', function(e) {
         }, 2000);
     }, 2000);
 });
+
+/* Specialties section */
+  document.addEventListener("DOMContentLoaded", () => {
+    const featureRows = document.querySelectorAll(".feature-row");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); // animate once
+          }
+        });
+      },
+      {
+        threshold: 0.2
+      }
+    );
+
+    featureRows.forEach(row => observer.observe(row));
+  });

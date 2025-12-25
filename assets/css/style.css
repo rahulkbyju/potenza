@@ -384,3 +384,34 @@ body {
         font-size: 1.1rem;
     }
 }
+
+/* Custom hr element between the specialties items */
+.custom-hr {
+    width: 85%;
+    margin: 1.5rem auto;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+/* Specialties section */
+/* Initial hidden state */
+.feature-row {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible state */
+.feature-row.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-row h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-orange);
+}
+
+.order-6 {
+    order: 6;
+}
